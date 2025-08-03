@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load trained model and encoders
-model = joblib.load("yield_model.pkl")
+model = joblib.load("yield_model .pkl")
 crop_labels = joblib.load("crop_labels.pkl")
 country_labels = joblib.load("country_labels.pkl")
 
@@ -27,3 +27,4 @@ if st.button("Predict Yield"):
     input_data = np.array([[rainfall, temperature, crop_map[crop], country_map[country]]])
     predicted_yield = model.predict(input_data)[0]
     st.success(f"🌱 Predicted Crop Yield: **{predicted_yield:.2f} hg/ha**")
+
